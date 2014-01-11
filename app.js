@@ -42,5 +42,9 @@ app.use(function (err, req, res, next) {
 });
 
 app.listen(HTTP_PORT, function (err) {
-    console.log('Server started');
+    if (err) {
+        return console.error(err.message);
+    }
+
+    console.log('Server started at', HTTP_PORT);
 });
