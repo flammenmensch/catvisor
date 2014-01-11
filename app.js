@@ -19,7 +19,7 @@ app.configure(function () {
     app.set('layout', 'layout');
     app.set('views', __dirname + '/views');
 
-    app.set('domain', 'catvisor.aws.af.cm');
+    app.set('domain', 'catvisor.herokuapp.com');
     app.set('name', 'Котовизор');
     app.set('version', 'v1.0.0 &alpha;lpha');
     app.set('year', 2014);

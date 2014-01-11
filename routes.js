@@ -14,7 +14,7 @@ module.exports = {
         index: function (req, res, next) {
             res.render('index', {
                 appName: 'Котовизор',
-                appDomain: 'catvisor.aws.af.cm',
+                appDomain: 'catvisor.herokuapp.com',
                 appVersion: '0.0.1 &alpha;lpha',
                 appYear: '2014'
             });
