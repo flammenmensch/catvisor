@@ -5,7 +5,7 @@ var express = require('express');
 var hogan = require('hogan-express');
 var routes = require('./routes');
 
-var HTTP_PORT = process.env.HTTP_PORT || 5000;
+var HTTP_PORT = process.env.PORT || 5000;
 var app = express();
 
 app.configure(function () {
