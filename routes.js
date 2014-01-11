@@ -4,7 +4,7 @@
 var http = require('http');
 var Giphy = require('./giphy').Giphy;
 
-var API_KEY = process.env.GIPHY_API_KEY;
+var API_KEY = process.env.GIPHY_API_KEY  || 'dc6zaTOxFJmzC';
 
 var giphyService = new Giphy(API_KEY);
 
