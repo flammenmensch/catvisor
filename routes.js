@@ -4,7 +4,7 @@
 var http = require('http');
 var Giphy = require('./giphy').Giphy;
 
-var API_KEY = process.env.GIPHY_API_KEY  || 'dc6zaTOxFJmzC';
+var API_KEY = process.env.GIPHY_API_KEY;
 
 var giphyService = new Giphy(API_KEY);
 
@@ -12,10 +12,10 @@ module.exports = {
 
     site: {
         index: function (req, res, next) {
-            res.render('index', {
+            res.render('layout', {
                 appName: 'Котовизор',
                 appDomain: 'catvisor.herokuapp.com',
-                appVersion: '0.0.1 &alpha;lpha',
+                appVersion: '0.1.0 &beta;eta',
                 appYear: '2014'
             });
         }
