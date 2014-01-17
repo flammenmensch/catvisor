@@ -3,10 +3,6 @@
  */
 var http = require('http');
 
-var GiphyService = require('./lib/giphy').GiphyService;
-
-var giphy = new GiphyService(process.env.GIPHY_API_KEY);
-
 module.exports = {
 
     site: {
