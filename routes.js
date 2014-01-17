@@ -19,6 +19,7 @@ module.exports = {
                 appYear: req.app.get('appYear'),
                 fbAppId: req.app.get('fbAppId'),
                 fbAppAdmins: req.app.get('fbAppAdmins'),
+                gaKey: req.app.get('gaKey'),
                 partials: {
                     facebookLikeButton: 'facebook-share',
                     googleAnalytics: 'google-analytics',

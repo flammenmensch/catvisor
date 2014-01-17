@@ -50,7 +50,7 @@ app.configure(function () {
     app.set('appYear', 2014);
     app.set('fbAppId', process.env.FB_APP_ID);
     app.set('fbAppAdmins', process.env.FB_APP_ADMINS);
-    app.set('googleAnalyticsId', process.env.GA_KEY);
+    app.set('gaKey', process.env.GA_KEY);
     app.set('httpPort', process.env.PORT);
     app.set('giphyApiKey', process.env.GIPHY_API_KEY);
 });
