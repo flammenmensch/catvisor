@@ -1,0 +1,36 @@
+@media (min-width: 768px) {
+    .container {
+        max-width: 730px;
+    }
+}
+
+body {
+    background: url(../assets/bg.jpg) repeat;
+}
+
+.panel {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.panel-body {
+    padding: 0;
+}
+
+#flashContent {
+    width: 698px;
+    height: 400px;
+    line-height: 400px;
+    text-align: center;
+}
+
+#flashContent img {
+    vertical-align: middle;
+    max-height: 400px;
+    max-width: 698px;
+    opacity: .5;
+}
+
+object {
+    float:left;
+}

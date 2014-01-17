@@ -2,21 +2,28 @@
  * Created by flammenmensch on 11.01.14.
  */
 var http = require('http');
-var Giphy = require('./giphy').Giphy;
 
-var API_KEY = process.env.GIPHY_API_KEY;
+var GiphyService = require('./lib/giphy').GiphyService;
 
-var giphyService = new Giphy(API_KEY);
+var giphy = new GiphyService(process.env.GIPHY_API_KEY);
 
 module.exports = {
 
     site: {
         index: function (req, res, next) {
-            res.render('layout', {
-                appName: 'Котовизор',
-                appDomain: 'catvisor.herokuapp.com',
-                appVersion: '0.1.0 &beta;eta',
-                appYear: '2014'
+            res.render('index', {
+                appName: req.app.get('appName'),
+                appDescription: req.app.get('appDescription'),
+                appDomain: req.app.get('appDomain'),
+                appVersion: req.app.get('appVersion'),
+                appYear: req.app.get('appYear'),
+                fbAppId: req.app.get('fbAppId'),
+                fbAppAdmins: req.app.get('fbAppAdmins'),
+                partials: {
+                    facebookLikeButton: 'facebook-share',
+                    googleAnalytics: 'google-analytics',
+                    githubRibbon: 'github-ribbon'
+                }
             });
         }
     },
@@ -25,7 +32,7 @@ module.exports = {
         random: function (req, res, next) {
             var tags = req.query.tag || 'cat';
 
-            giphyService.random(tags, function (err, data) {
+            giphy.random(tags, function (err, data) {
                 if (err) {
                     return next(err);
                 }
@@ -37,7 +44,7 @@ module.exports = {
         loadById: function (req, res, next) {
             var id = req.param('id');
 
-            giphyService.loadById(id, function (err, data) {
+            giphy.loadById(id, function (err, data) {
                 if (err) {
                     return next(err);
                 }

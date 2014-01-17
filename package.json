@@ -1,9 +1,10 @@
 {
-  "name": "catavisor",
-  "version": "0.0.1",
+  "name": "catvisor",
+  "version": "0.1.0",
   "dependencies": {
     "express": "~3.4.7",
-    "hogan-express": "~0.5.2"
+    "hogan-express": "~0.5.2",
+    "hbs": "~2.4.0"
   },
   "repository": {
     "type": "git",
