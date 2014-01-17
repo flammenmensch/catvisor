@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+    <meta charset="utf-8">
+    <meta property="og:type" content="video" />
+    <meta property="og:title" content="{{appName}}" />
+    <meta property="og:description" content="{{appDescription}}" />
+    <meta property="og:url" content="http://{{appDomain}}"/>
+    <meta property="og:image" content="http://{{appDomain}}/assets/cat_eyes.png"/>
+    <meta property="og:site_name" content="{{appName}}"/>
+    <meta property="og:video" content="http://{{appDomain}}/assets/player.swf" />
+    <meta property="og:video:secure_url" content="https://{{appDomain}}/assets/player.swf" />
+    <meta property="og:video:width" content="640" />
+    <meta property="og:video:height" content="480" />
+    <meta property="og:video:type" content="application/x-shockwave-flash" />
+
+    <meta property="fb:app_id" content="{{fbAppId}}" />
+    <meta property="fb:admins" content="{{fbAppAdmins}}" />
+
+    <meta name="title" content="{{appName}}" />
+    <meta name="description" content="{{appDescription}}" />
+    <link rel="image_src" href="//{{appDomain}}/assets/cat_eyes.jpg" />
+
+    <title>{{appName}}</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+{{{block "fbRoot"}}}
+<div class="container">
+
+    <div class="page-header">
+        <h2>{{appName}} <small>{{{appVersion}}}</small></h2>
+    </div>
+
+    {{{body}}}
+
+    <div class="footer">
+        <p>
+            {{appName}} {{{appVersion}}} &copy; {{appYear}}.
+            Котики от <a href="http://ru.iconka.com/cat-power/" target="_blank">Iconka</a> и
+            <a href="http://giphy.com" target="_blank">Giphy</a>.
+        </p>
+    </div>
+</div>
+
+{{> github_ribbon}}
+
+{{> google_analytics}}
+
+{{{block "scripts"}}}
+</body>
+</html>

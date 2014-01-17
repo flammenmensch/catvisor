@@ -1,0 +1,25 @@
+{
+  "name": "catvisor",
+  "version": "0.1.0",
+  "homepage": "https://github.com/flammenmensch/catvisor",
+  "authors": [
+    "Flammenmensch <maleventum@gmail.com>"
+  ],
+  "description": "Random cat gifs",
+  "keywords": [
+    "cats"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.0.3",
+    "swfobject": "*"
+  }
+}

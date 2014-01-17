@@ -17,5 +17,6 @@ build
 node_modules
 public/bower_components
 
+.idea/*
 .env
 npm-shrinkwrap.json

@@ -1,0 +1,19 @@
+<div class="panel panel-default">
+    <div class="panel-body">
+        <div id="flashContent">
+            <img src="assets/cat_hungry.png" alt="Требуется Adobe Flash Player">
+        </div>
+    </div>
+    <div class="panel-footer">
+        {{> facebook_share}}
+    </div>
+</div>
+{{#extend "scripts"}}
+<script type="text/javascript" src="bower_components/swfobject/swfobject/swfobject.js"></script>
+<script type="text/javascript">
+    (function () {
+        swfobject.embedSWF('assets/player.swf',
+                'flashContent', '100%', '100%', '11.0.0', null, { tags: 'cat animals cute funny' }, { wmode: 'direct' });
+    } ());
+</script>
+{{/extend}}
