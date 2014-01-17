@@ -43,16 +43,16 @@ app.configure(function () {
     app.set('views', __dirname + '/views');
 
     // Application variables
-    app.set('httpPort', process.env.PORT || 5000);
-    app.set('giphyApiKey', process.env.GIPHY_API_KEY || 'dc6zaTOxFJmzC');
     app.set('appDomain', 'catvisor.herokuapp.com');
     app.set('appName', 'Котовизор');
     app.set('appDescription', 'Управляемые гифки с котиками');
     app.set('appVersion', 'v0.1.0 &beta;eta');
     app.set('appYear', 2014);
-    app.set('fbAppId', '446934475434579');
-    app.set('fbAppAdmins', '702524723');
-    app.set('googleAnalyticsId', 'UA-47047792-1');
+    app.set('fbAppId', process.env.FB_APP_ID);
+    app.set('fbAppAdmins', process.env.FB_APP_ADMINS);
+    app.set('googleAnalyticsId', process.env.GA_KEY);
+    app.set('httpPort', process.env.PORT);
+    app.set('giphyApiKey', process.env.GIPHY_API_KEY);
 });
 
 app.get('/', routes.site.index);
